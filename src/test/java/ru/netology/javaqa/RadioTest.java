@@ -39,10 +39,31 @@ public class RadioTest {
     }
 
     @Test
+    public void setVolume(){
+        Radio radio = new Radio();
+        radio.setVolume(5);
+
+        int expected = 5;
+        int actual = radio.getVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void plusVolume(){
         Radio radio = new Radio();
         radio.setVolume(11);
         radio.plusVolume();
+
+        int expected = 10;
+        int actual = radio.getVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void minusVolume(){
+        Radio radio = new Radio();
+        radio.setVolume(-1);
+        radio.minusVolume();
 
         int expected = 0;
         int actual = radio.getVolume();
