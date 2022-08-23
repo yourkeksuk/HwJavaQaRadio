@@ -36,7 +36,7 @@ public class Radio {
     }
 
     public int getVolume() {
-        return numberStation;
+        return volume;
     }
 
     public void setVolume(int volume) {
